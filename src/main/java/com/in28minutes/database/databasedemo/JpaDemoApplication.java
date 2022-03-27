@@ -36,9 +36,9 @@ public class JpaDemoApplication implements CommandLineRunner {
 		
 		repository.deleteById(10002);
 
-		
+		logger.info("All users -> {}", repository.findAll());
+
 		/*
-		logger.info("All users -> {}", dao.findAll());
 
 
 		*/
