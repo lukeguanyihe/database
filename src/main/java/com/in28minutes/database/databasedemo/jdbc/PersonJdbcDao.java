@@ -27,4 +27,9 @@ public class PersonJdbcDao {
 				new BeanPropertyRowMapper<>(Person.class), id);
 		
 	}
+	
+	public int deleteById(int id) {
+		return jdbcTemplate.update("delete from person where id = ? ", new Object[] {id});
+		
+	}
 }
