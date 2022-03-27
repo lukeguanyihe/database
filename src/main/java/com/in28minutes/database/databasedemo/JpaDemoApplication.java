@@ -34,10 +34,12 @@ public class JpaDemoApplication implements CommandLineRunner {
 		logger.info("Updating id 10002 -> {}", 
 				repository.update(new Person(10003, "Pieter", "Utrecht", new Date())));
 		
+		repository.deleteById(10002);
+
+		
 		/*
 		logger.info("All users -> {}", dao.findAll());
 
-		logger.info("Deleting id 10002 -> {}", dao.deleteById(10002));
 
 		*/
 	}
